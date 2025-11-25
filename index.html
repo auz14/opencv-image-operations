@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCV.js - Operaciones Aritméticas en Imágenes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖼️ Operaciones Aritméticas con OpenCV.js</h1>
+            <p>Aplicación basada en los tutoriales de OpenCV.js - Image Arithmetics</p>
+        </header>
+
+        <div class="content">
+            <div class="upload-section">
+                <div class="upload-box">
+                    <h3>Imagen 1</h3>
+                    <input type="file" id="fileInput1" accept="image/*">
+                    <canvas id="canvasInput1"></canvas>
+                </div>
+
+                <div class="upload-box">
+                    <h3>Imagen 2</h3>
+                    <input type="file" id="fileInput2" accept="image/*">
+                    <canvas id="canvasInput2"></canvas>
+                </div>
+            </div>
+
+            <div class="controls">
+                <h3>Operaciones Disponibles:</h3>
+                <div class="button-grid">
+                    <button onclick="addImages()" class="op-btn">➕ Sumar (cv.add)</button>
+                    <button onclick="subtractImages()" class="op-btn">➖ Restar (cv.subtract)</button>
+                    <button onclick="bitwiseAND()" class="op-btn">🔗 Bitwise AND</button>
+                    <button onclick="bitwiseOR()" class="op-btn">🔀 Bitwise OR</button>
+                    <button onclick="bitwiseXOR()" class="op-btn">⚡ Bitwise XOR</button>
+                    <button onclick="bitwiseNOT()" class="op-btn">🔄 Bitwise NOT (Img1)</button>
+                    <button onclick="blendImages()" class="op-btn">🎨 Blend (Alpha=0.5)</button>
+                    <button onclick="clearResult()" class="op-btn clear-btn">🗑️ Limpiar</button>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <h3>Resultado:</h3>
+                <div id="status" class="status"></div>
+                <canvas id="canvasOutput"></canvas>
+            </div>
+        </div>
+
+        <footer>
+            <p>Tutorial basado en: <a href="https://docs.opencv.org/3.4/dd/d4d/tutorial_js_image_arithmetics.html" target="_blank">OpenCV.js Image Arithmetics</a></p>
+            <p>Creado por: Álvaro Andújar | Usuario GitHub: auz14</p>
+        </footer>
+    </div>
+
+    <script async src="https://docs.opencv.org/3.4.0/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+    <script src="script.js"></script>
+</body>
+</html>
